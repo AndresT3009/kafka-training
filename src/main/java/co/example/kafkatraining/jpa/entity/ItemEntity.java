@@ -11,6 +11,7 @@ public class ItemEntity {
     @Id
     private String itemId;
     private int quantity;
+    private double value;
 
     public void decreaseQuantity(int quantity) throws Exception {
 
@@ -19,6 +20,10 @@ public class ItemEntity {
         if (this.quantity < 0) {
             throw new Exception("insufficient stock");
         }
+    }
+
+    public void applyOffer(double value){
+        this.value *= 0.9;
     }
 
     public void incrementQuantity(int quantity) {

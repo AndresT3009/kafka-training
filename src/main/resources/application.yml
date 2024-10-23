@@ -4,7 +4,7 @@ spring:
     name: kafka-training
 
   datasource:
-    url: jdbc:postgresql://localhost:5432/develop
+    url: jdbc:postgresql://localhost:5434/develop
     username: admin
     password: admin123
     driver-class-name: org.postgresql.Driver
@@ -41,5 +41,3 @@ spring:
 
     listener:
       ack-mode: record     #por defecto es en BATCH
-
-
